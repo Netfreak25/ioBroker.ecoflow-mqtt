@@ -42,8 +42,8 @@ class EcoflowMqtt extends utils.Adapter {
 		this.log.info("config email: " + this.config.email);
 		this.log.info("config password: " + this.config.password);
 		this.log.info("config Token: " + this.config.Token);
-		this.log.info("config mqtt-user: " + this.config.mqtt-user);
-		this.log.info("config mqtt-pass: " + this.config.mqtt-pass);
+		this.log.info("config mqtt-user: " + this.config.mqttuser);
+		this.log.info("config mqtt-pass: " + this.config.mqttpass);
 		this.log.info("config UserId: " + this.config.UserId);
 
 		/*
