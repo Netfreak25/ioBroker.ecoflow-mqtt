@@ -16,6 +16,7 @@ class EcoflowMqtt extends utils.Adapter {
 	/**
 	 * @param {Partial<utils.AdapterOptions>} [options={}]
 	 */
+
 	constructor(options) {
 		super({
 			...options,
@@ -26,11 +27,33 @@ class EcoflowMqtt extends utils.Adapter {
 		// this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
+
+
+		var cname, cvalue, Pfad, json, i, wert, objektid, value;
 	}
 
 	/**
 	 * Is called when databases are connected and adapter received configuration.
 	 */
+
+	function subsequenceFromStartFromEnd(sequence, at1, at2) {
+	  var start = at1;
+	  var end = sequence.length - 1 - at2 + 1;
+	  return sequence.slice(start, end);
+	}
+
+
+	async function write(cname, cvalue) {
+	        var objectName = cname;
+	        var MyString = cvalue;
+	        
+	        if ( !existsState(objectName )) {
+	        createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
+	        } else {
+	        setState(objectName,"" + MyString);
+	        }
+	}
+
 	async onReady() {
 		// Initialize your adapter here
 
@@ -141,8 +164,8 @@ class EcoflowMqtt extends utils.Adapter {
 			// The state was changed
 			//this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			if ( id = "mqtt.0.app.device.property.DAEBZ5ZD9180661") {
-				const state2 = this.getState("mqtt.0.app.device.property.DAEBZ5ZD9180661").val;
 				this.log.info(`state ${id} was updated`);
+
 			}
 		}
 	}
