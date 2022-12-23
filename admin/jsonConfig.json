@@ -17,12 +17,12 @@
 			"label": "Token",
 			"newLine": true
 		},
-		"mqtt-user": {
+		"mqttuser": {
 			"type": "text",
 			"label": "MQTT Username",
 			"newLine": true
 		},
-		"mqtt-pass": {
+		"mqttpass": {
 			"type": "text",
 			"label": "MQTT Password",
 			"newLine": true
