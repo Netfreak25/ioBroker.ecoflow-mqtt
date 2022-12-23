@@ -46,6 +46,8 @@ class EcoflowMqtt extends utils.Adapter {
 		this.log.info("config mqtt-pass: " + this.config.mqttpass);
 		this.log.info("config UserId: " + this.config.UserId);
 
+
+		adapter.subscribeForeignStates('mqtt.0.app.device.property.DAEBZ5ZD9180661'); 
 		/*
 		For every state in the system there has to be also an object of type state
 		Here a simple template for a boolean variable named "testVariable"
