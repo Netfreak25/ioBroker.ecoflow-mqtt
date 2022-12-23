@@ -1,0 +1,109 @@
+{
+	"common": {
+		"name": "ecoflow-mqtt",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "ecoflow-mqtt",
+		"titleLang": {
+			"en": "ecoflow-mqtt",
+			"de": "ecoflow-mqtt",
+			"ru": "ecoflow-mqtt",
+			"pt": "ecoflow-mqtt",
+			"nl": "ecoflow-mqtt",
+			"fr": "ecoflow-mqtt",
+			"it": "ecoflow-mqtt",
+			"es": "ecoflow-mqtt",
+			"pl": "ecoflow-mqtt",
+			"zh-cn": "ecoflow-mqtt"
+		},
+		"desc": {
+			"en": "Ecoflow Status & Control",
+			"de": "Ecoflow Status & Control",
+			"ru": "Ecoflow Status & Control",
+			"pt": "Ecoflow Status & Control",
+			"nl": "Ecoflow Status & Control",
+			"fr": "Ecoflow Status & Control",
+			"it": "Ecoflow Status & Control",
+			"es": "Ecoflow Status & Control",
+			"pl": "Ecoflow Status & Control",
+			"zh-cn": "Ecoflow Status & Control"
+		},
+		"authors": [
+			"Moritz <Moritz.Kuhn@gmail.com>"
+		],
+		"keywords": [
+			"ecoflow"
+		],
+		"license": "GPL-3.0",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "ecoflow-mqtt.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/Netfreak25/ioBroker.ecoflow-mqtt/main/admin/ecoflow-mqtt.png",
+		"readme": "https://github.com/Netfreak25/ioBroker.ecoflow-mqtt/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "energy",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "push",
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.1.13"
+			}
+		]
+	},
+	"native": {
+		"email": "",
+		"password": "",
+		"Token": "",
+		"mqtt-user": "",
+		"mqtt-pass": "",
+		"UserId": ""
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}

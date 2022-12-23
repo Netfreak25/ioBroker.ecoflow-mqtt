@@ -1,0 +1,9 @@
+{
+	"ecoflow-mqtt adapter settings": "Adapterinstellingen voor ecoflow-mqtt",
+	"email": "E-Mail",
+	"password": "Password",
+	"Token": "Token",
+	"mqtt-user": "MQTT Username",
+	"mqtt-pass": "MQTT Password",
+	"UserId": "UserId"
+}

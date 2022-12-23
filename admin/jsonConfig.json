@@ -1,0 +1,36 @@
+{
+	"i18n": true,
+	"type": "panel",
+	"items": {
+		"email": {
+			"type": "text",
+			"label": "E-Mail",
+			"newLine": true
+		},
+		"password": {
+			"type": "text",
+			"label": "Password",
+			"newLine": true
+		},
+		"Token": {
+			"type": "text",
+			"label": "Token",
+			"newLine": true
+		},
+		"mqtt-user": {
+			"type": "text",
+			"label": "MQTT Username",
+			"newLine": true
+		},
+		"mqtt-pass": {
+			"type": "text",
+			"label": "MQTT Password",
+			"newLine": true
+		},
+		"UserId": {
+			"type": "text",
+			"label": "UserId",
+			"newLine": true
+		}
+	}
+}

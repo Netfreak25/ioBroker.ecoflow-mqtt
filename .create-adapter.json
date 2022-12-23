@@ -1,0 +1,80 @@
+{
+	"expert": "yes",
+	"cli": false,
+	"adapterName": "ecoflow-mqtt",
+	"title": "ecoflow-mqtt",
+	"description": "Ecoflow Status & Control",
+	"keywords": [
+		"ecoflow"
+	],
+	"icon": {
+		"data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEABAMAAACuXLVVAAAAGFBMVEVHcEwAAAD////AwMCBgYE+Pj5fX18WFhZZ1Cf9AAAAAXRSTlMAQObYZgAAAjRJREFUeNrt2k9PwjAcxnHeQoHRM93AM0zhDBl6ngE9D008g/H9265bV/+RxRQJ+H0OUkq3faA/1gF2OoQQQgghhBBCCCGEkK8RRwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4PwAT+nhzFoP+iVgqQ4naT0IAAAA5wo4+YmItQAAAAAAAJwcsM4OZ9V6EBckAAAAOFdAq5SAU64FAAAAAADgogGtrriPCWi/HAMAAAAAX9EAAAAAAIBLBbxtbHJzp2w9Vt07fSOrR/Wd58I7jO4xN4NbIbJC9EN8Wz7RR5uWrZH5tVrfxvqIUb0q52I6cdtEZqNEA3uxEHrLbhIGsFc1oFc24t0PgK0bFwDQTIFUalVNwVLNNg9LvWtvChpAZAauldoFATTpq7uqJc2zk5G68h9uAD21qP6GBfTUrmoNVFlw2+R7QDe2ykkQQP3htPB207cU3SHrz6g+4N4OXA4DF6EPqJ+pK8IPgNFfAZIfAOOQgCZ2ai2gqF7qqKy3TzWwt8cLVAN+ERbufTY3VTYdfQAMm4F5WamhAZGK8/pg6kXIrd61D0iaN0mSi2iqGSEA9b8ILVw5jNw5MfcB26oaFkLageP6jBnmFxM9wwO3FthVYS58wKsD6BqxPAcYh3kFRJSZ1o2Z/+f0+sX0pG4N1F1lTMcgSzMzXf206QtyPSAPrfSSKyIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgogCEEEIIIYQQQgghhPyvvAPHFg4utPglhwAAAABJRU5ErkJggg==",
+		"extension": "png"
+	},
+	"features": [
+		"adapter"
+	],
+	"adminFeatures": [],
+	"type": "energy",
+	"startMode": "daemon",
+	"connectionType": "cloud",
+	"dataSource": "push",
+	"connectionIndicator": "yes",
+	"adapterSettings": [
+		{
+			"key": "email",
+			"label": "E-Mail",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "password",
+			"label": "Password",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "Token",
+			"label": "Token",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "mqtt-user",
+			"label": "MQTT Username",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "mqtt-pass",
+			"label": "MQTT Password",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "UserId",
+			"label": "UserId",
+			"inputType": "text",
+			"defaultValue": ""
+		}
+	],
+	"language": "JavaScript",
+	"nodeVersion": "14",
+	"adminUi": "json",
+	"releaseScript": "no",
+	"indentation": "Tab",
+	"quotes": "double",
+	"es6class": "yes",
+	"tools": [
+		"ESLint",
+		"type checking"
+	],
+	"authorName": "Moritz",
+	"authorGithub": "Netfreak25",
+	"authorEmail": "Moritz.Kuhn@gmail.com",
+	"gitRemoteProtocol": "HTTPS",
+	"license": "GNU GPLv3",
+	"dependabot": "no",
+	"target": "github",
+	"creatorVersion": "2.3.0"
+}
