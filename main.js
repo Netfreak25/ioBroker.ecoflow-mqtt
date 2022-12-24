@@ -7,7 +7,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-var cname, cvalue, Pfad, json, i, wert, objektid, value;
+var cname, cvalue
 var jsonata = require("jsonata");
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -36,7 +36,6 @@ class EcoflowMqtt extends utils.Adapter {
 	/**
 	 * Is called when databases are connected and adapter received configuration.
 	 */
-
 
 
 	async write(cname, cvalue) {
@@ -164,7 +163,19 @@ class EcoflowMqtt extends utils.Adapter {
 				var json_data = JSON.stringify(state.val);
 				var json_ausdruck = jsonata(json_data,'$.params');
 				var Text2 = json_data.slice(13, json_data.length - 1);
-				//var Liste = Text2.split(',');
+				var Liste = Text2.split(',');
+
+
+				for (var i_index in Liste) {
+				    i = i_list[i_index];
+				    var wert = i.split(':');
+				    var objektid = wert[0];
+				    objektid = objektid.slice(1, objektid.length - 1);
+				    var value = wert[1];
+				    //await write(String(Pfad) + String(objektid), value);
+				    this.log.info("0_userdata.0.EcoFlow.MQTT.SERIALNUMBER." + String(objektid) + " : " + String(value));
+				  }
+
 				this.log.info(Text2);
 				//this.log.info(params.val);
 				//var list = "" + params.split(',');
