@@ -7,7 +7,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-
+var cname, cvalue, Pfad, json, i, wert, objektid, value;
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
@@ -29,7 +29,7 @@ class EcoflowMqtt extends utils.Adapter {
 		this.on("unload", this.onUnload.bind(this));
 
 
-		var cname, cvalue, Pfad, json, i, wert, objektid, value;
+		
 	}
 
 	/**
