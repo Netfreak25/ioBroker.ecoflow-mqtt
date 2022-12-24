@@ -8,6 +8,7 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 var cname, cvalue, Pfad, json, i, wert, objektid, value;
+var jsonata = require("jsonata");
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
