@@ -42,11 +42,11 @@ class EcoflowMqtt extends utils.Adapter {
 	        var objectName = cname;
 	        var MyString = cvalue;
 	        
-	        //if ( !existsState(objectName )) {
-	        //createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
-	        //} else {
-	        //setState(objectName,"" + MyString);
-	        //}
+	        if ( !existsState(objectName )) {
+	        createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
+	        } else {
+	        setState(objectName,"" + MyString);
+	        }
 	}
 
 	async onReady() {
@@ -159,7 +159,6 @@ class EcoflowMqtt extends utils.Adapter {
 			// The state was changed
 			//this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			if ( id = "mqtt.0.app.device.property.DAEBZ5ZD9180661") {
-				this.log.info(`state ${id} was updated`);
 				var json_data = JSON.stringify(state.val);
 				var json_ausdruck = jsonata(json_data,'$.params');
 				var Text2 = json_data.slice(13, json_data.length - 1);
