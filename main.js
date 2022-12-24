@@ -36,7 +36,7 @@ class EcoflowMqtt extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 
-	function subsequenceFromStartFromEnd(sequence, at1, at2) {
+	async function subsequenceFromStartFromEnd(sequence, at1, at2) {
 	  var start = at1;
 	  var end = sequence.length - 1 - at2 + 1;
 	  return sequence.slice(start, end);
