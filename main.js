@@ -163,10 +163,8 @@ class EcoflowMqtt extends utils.Adapter {
 				this.log.info(`state ${id} was updated`);
 				var json_data = JSON.stringify(state.val);
 				var json_ausdruck = jsonata(json_data,'$.params');
-				var Text2 = json_data.slice(11, json_data.length - 1);
+				var Text2 = json_data.slice(13, json_data.length - 1);
 				//var Liste = Text2.split(',');
-				this.log.info(json_data);
-				this.log.info(json_ausdruck);
 				this.log.info(Text2);
 				//this.log.info(params.val);
 				//var list = "" + params.split(',');
