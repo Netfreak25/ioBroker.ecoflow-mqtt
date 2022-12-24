@@ -166,7 +166,7 @@ class EcoflowMqtt extends utils.Adapter {
 				var json_data = JSON.stringify(json_objekt);
 				//var Text2 = json_data.slice(1, json_data.length - 1);
 				//var Liste = Text2.split(',');
-				this.log.info(json_objekt.params.val);
+				this.log.info(json_data.val);
 				//this.log.info(params.val);
 				//var list = "" + params.split(',');
 
