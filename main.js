@@ -36,22 +36,22 @@ class EcoflowMqtt extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 
-	async function subsequenceFromStartFromEnd(sequence, at1, at2) {
+	async subsequenceFromStartFromEnd(sequence, at1, at2) {
 	  var start = at1;
 	  var end = sequence.length - 1 - at2 + 1;
 	  return sequence.slice(start, end);
 	}
 
 
-	async function write(cname, cvalue) {
+	async write(cname, cvalue) {
 	        var objectName = cname;
 	        var MyString = cvalue;
 	        
-	        if ( !existsState(objectName )) {
-	        createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
-	        } else {
-	        setState(objectName,"" + MyString);
-	        }
+	        //if ( !existsState(objectName )) {
+	        //createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
+	        //} else {
+	        //setState(objectName,"" + MyString);
+	        //}
 	}
 
 	async onReady() {
