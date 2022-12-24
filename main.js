@@ -170,13 +170,11 @@ class EcoflowMqtt extends utils.Adapter {
 				    var i = Liste[i_index];
 				    var wert = i.split(':');
 				    var objektid = wert[0];
-				    objektid = objektid.slice(1, objektid.length - 1);
+				    objektid = objektid.slice(2, objektid.length - 2);
 				    var value = wert[1];
 				    //await write(String(Pfad) + String(objektid), value);
 				    this.log.info("0_userdata.0.EcoFlow.MQTT.SERIALNUMBER." + String(objektid) + " : " + String(value));
 				  }
-
-				this.log.info(Text2);
 				//this.log.info(params.val);
 				//var list = "" + params.split(',');
 
