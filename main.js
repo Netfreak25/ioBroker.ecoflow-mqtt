@@ -161,11 +161,11 @@ class EcoflowMqtt extends utils.Adapter {
 			//this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			if ( id = "mqtt.0.app.device.property.DAEBZ5ZD9180661") {
 				this.log.info(`state ${id} was updated`);
-				json_objekt = (function () { try {return JSON.parse(json);} catch(e) {return {};}})();
-				json_ausdruck = jsonata(json_objekt,'$.params');
-				json_data = JSON.stringify(json_ausdruck);
-				Text2 = json_data.slice(1, json_data.length - 1);
-				Liste = Text2.split(',');
+				var json_objekt = (function () { try {return JSON.parse(json);} catch(e) {return {};}})();
+				var json_ausdruck = jsonata(json_objekt,'$.params');
+				var json_data = JSON.stringify(json_ausdruck);
+				var Text2 = json_data.slice(1, json_data.length - 1);
+				var Liste = Text2.split(',');
 				this.log.info(string);
 				this.log.info(params.val);
 				//var list = "" + params.split(',');
