@@ -37,11 +37,6 @@ class EcoflowMqtt extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 
-	async subsequenceFromStartFromEnd(sequence, at1, at2) {
-	  var start = at1;
-	  var end = sequence.length - 1 - at2 + 1;
-	  return sequence.slice(start, end);
-	}
 
 
 	async write(cname, cvalue) {
@@ -166,9 +161,11 @@ class EcoflowMqtt extends utils.Adapter {
 			//this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			if ( id = "mqtt.0.app.device.property.DAEBZ5ZD9180661") {
 				this.log.info(`state ${id} was updated`);
-				var json = JSON.parse(state.val)
-				var string = JSON.stringify(json,'$.params')
-				var params = this.subsequenceFromStartFromEnd(string, 1, 1)
+				json_objekt = (function () { try {return JSON.parse(json);} catch(e) {return {};}})();
+				json_ausdruck = jsonata(json_objekt,'$.params');
+				json_data = JSON.stringify(json_ausdruck);
+				Text2 = json_data.slice(1, json_data.length - 1);
+				Liste = Text2.split(',');
 				this.log.info(string);
 				this.log.info(params.val);
 				//var list = "" + params.split(',');
