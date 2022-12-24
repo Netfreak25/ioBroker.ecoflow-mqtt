@@ -169,7 +169,7 @@ class EcoflowMqtt extends utils.Adapter {
 				var json = JSON.parse(state.val)
 				var string = JSON.stringify(json,'$.params')
 				var params = this.subsequenceFromStartFromEnd(string, 1, 1)
-
+				this.log.info(string);
 				this.log.info(params.val);
 				//var list = "" + params.split(',');
 
