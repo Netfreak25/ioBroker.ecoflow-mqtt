@@ -42,11 +42,11 @@ class EcoflowMqtt extends utils.Adapter {
 	        var objectName = cname;
 	        var MyString = cvalue;
 	        
-	        if ( !existsState(objectName )) {
-	        createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
-	        } else {
-	        setState(objectName,"" + MyString);
-	        }
+	       // if ( !existsState(objectName )) {
+	       // this.createState(objectName,MyString,{name: " ",  type: 'string', role: 'value'}, function () {}); 
+	       // } else {
+	       // this.setState(objectName,"" + MyString);
+	       // }
 	}
 
 	async onReady() {
