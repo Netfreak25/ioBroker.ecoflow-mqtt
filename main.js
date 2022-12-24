@@ -167,7 +167,7 @@ class EcoflowMqtt extends utils.Adapter {
 
 
 				for (var i_index in Liste) {
-				    i = i_list[i_index];
+				    i = Liste[i_index];
 				    var wert = i.split(':');
 				    var objektid = wert[0];
 				    objektid = objektid.slice(1, objektid.length - 1);
